@@ -1,26 +1,543 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0b1120;
+  --orange: #f97316;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0b1120;
+  color: #fff;
+  font-family: var(--font-inter), "Inter", sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ── Brand wordmark ── */
+.brand {
+  font-family: var(--font-barlow), "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+.brand-accent {
+  color: var(--orange);
+}
+
+/* ── Barlow Condensed override for headings that opt in ── */
+.lh {
+  font-family: var(--font-barlow), "Barlow Condensed", sans-serif;
+}
+
+/* ── Language font overrides ── */
+[data-lang="si"] .lh {
+  font-family: var(--font-noto-sinhala), "Noto Sans Sinhala", sans-serif !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+}
+[data-lang="si"] .lb {
+  font-family: var(--font-noto-sinhala), "Noto Sans Sinhala", sans-serif !important;
+}
+[data-lang="ta"] .lh {
+  font-family: var(--font-noto-tamil), "Noto Sans Tamil", sans-serif !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+[data-lang="ta"] .lb {
+  font-family: var(--font-noto-tamil), "Noto Sans Tamil", sans-serif !important;
+}
+
+/* ── Keyframes ── */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes wordFade {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes navDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.45);
+  }
+}
+@keyframes dotPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* ── Scroll animations ── */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fd1 {
+  transition-delay: 0.1s;
+}
+.fd2 {
+  transition-delay: 0.2s;
+}
+.fd3 {
+  transition-delay: 0.3s;
+}
+
+/* ── Hero word stagger ── */
+.hw {
+  display: inline-block;
+}
+.hw0 {
+  animation: wordFade 0.55s ease 0.08s both;
+}
+.hw1 {
+  animation: wordFade 0.55s ease 0.2s both;
+}
+.hero-sub {
+  animation: heroFadeIn 0.7s ease 0.75s both;
+}
+.hero-cta-row {
+  animation: heroFadeIn 0.7s ease 0.9s both;
+}
+.hero-trust {
+  animation: heroFadeIn 0.7s ease 1.05s both;
+}
+
+/* ── Navbar ── */
+nav {
+  animation: navDown 0.5s ease both;
+}
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: #0f1923;
+  border: 1px solid #1e3a5f;
+  border-radius: 8px;
+  padding: 4px;
+}
+.mobile-nav-btn {
+  display: none;
+}
+@media (max-width: 767px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav-btn {
+    display: flex;
+  }
+}
+.nav-link {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.nav-link:hover {
+  color: #fff;
+}
+
+/* ── Dashboard float ── */
+.dashboard-float {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+/* ── Section label ── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+.section-label::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 13px;
+  background: var(--orange);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 26px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+.btn-primary:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 24px rgba(249, 115, 22, 0.42);
+  background: #ea6a0a;
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 26px;
+  border-radius: 9999px;
+  border: 2px solid var(--orange);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+.btn-secondary:hover {
+  transform: scale(1.04);
+  background: rgba(249, 115, 22, 0.08);
+}
+
+/* ── Responsive grids ── */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 52px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: 80px;
+  }
+}
+
+.hero-headline {
+  font-family: var(--font-barlow), "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 0.93;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) {
+  .hero-headline {
+    font-size: 68px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-headline {
+    font-size: 84px;
+  }
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .problem-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.step-line {
+  display: none;
+  position: absolute;
+  top: 32px;
+  left: 22%;
+  right: 22%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #1e3a5f 20%, #1e3a5f 80%, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+@media (min-width: 768px) {
+  .step-line {
+    display: block;
+  }
+}
+.step-line.visible {
+  transform: scaleX(1);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+@media (min-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+    gap: 52px;
+  }
+}
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.trust-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* ── Cards ── */
+.feature-card {
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+.pricing-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.pricing-card-basic:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(30, 58, 95, 0.4);
+}
+.pricing-card-pro {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+.pricing-card-pro:hover {
+  transform: translateY(-8px);
+}
+.pricing-pro-border {
+  background:
+    linear-gradient(#162032, #162032) padding-box,
+    linear-gradient(135deg, #f97316 0%, #7c3100 100%) border-box;
+  border: 2px solid transparent;
+}
+
+/* Pro shimmer strip */
+.pro-shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(90deg, transparent 0%, #f97316 40%, #ffaa60 60%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+
+/* ── FAQ ── */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-inter), "Inter", sans-serif;
+  transition: color 0.2s;
+}
+.faq-question:hover {
+  color: var(--orange);
+}
+
+/* ── Footer links ── */
+.footer-link {
+  color: #64748b;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  color: #94a3b8;
+}
+
+/* ── Floating WA ── */
+.wa-float {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.wa-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.52);
+}
+
+/* ── Live dot ── */
+.live-dot {
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+.check-yes {
+  color: #22c55e;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.check-no {
+  color: #374151;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+  }
 }
