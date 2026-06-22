@@ -84,9 +84,13 @@ export function Navbar() {
           justifyContent: "space-between",
         }}
       >
-        <a href="#" style={{ display: "flex", alignItems: "baseline", lineHeight: 1 }}>
-          <span className="brand">PITSTOP</span>
-          <span className="brand brand-accent">IQ</span>
+        <a href="#" style={{ display: "flex", alignItems: "center", lineHeight: 1 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt="PitstopIQ"
+            style={{ height: 40, width: "auto", display: "block" }}
+          />
         </a>
 
         <div className="desktop-nav">

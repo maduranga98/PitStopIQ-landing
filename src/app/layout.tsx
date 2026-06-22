@@ -49,7 +49,11 @@ export const metadata: Metadata = {
     "PitstopIQ",
   ],
   icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏁</text></svg>",
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     type: "website",
@@ -58,12 +62,22 @@ export const metadata: Metadata = {
     description,
     siteName: "PitstopIQ",
     locale: "en_LK",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1424,
+        height: 752,
+        alt: "PitstopIQ — Vehicle Service Center Management SaaS",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: ["/og-image.png"],
   },
+  manifest: "/site.webmanifest",
   alternates: { canonical: siteUrl },
 };
 

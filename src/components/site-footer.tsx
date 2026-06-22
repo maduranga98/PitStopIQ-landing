@@ -22,9 +22,13 @@ export function SiteFooter() {
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <div className="footer-grid" style={{ marginBottom: 56 }}>
           <div>
-            <div style={{ display: "flex", alignItems: "baseline", marginBottom: 14 }}>
-              <span style={{ fontFamily: condensed, fontWeight: 800, fontSize: 26, color: "#fff" }}>PITSTOP</span>
-              <span style={{ fontFamily: condensed, fontWeight: 800, fontSize: 26, color: "#F97316" }}>IQ</span>
+            <div style={{ display: "flex", alignItems: "center", marginBottom: 14 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo.png"
+                alt="PitstopIQ"
+                style={{ height: 48, width: "auto", display: "block" }}
+              />
             </div>
             <p
               className="lb"
