@@ -69,6 +69,24 @@ button {
   font-family: var(--font-noto-tamil), "Noto Sans Tamil", sans-serif !important;
 }
 
+/* ── Hero headline size corrections for non-Latin scripts ── */
+[data-lang="si"] .hero-headline,
+[data-lang="ta"] .hero-headline {
+  font-size: 36px !important;
+}
+@media (min-width: 768px) {
+  [data-lang="si"] .hero-headline,
+  [data-lang="ta"] .hero-headline {
+    font-size: 46px !important;
+  }
+}
+@media (min-width: 1024px) {
+  [data-lang="si"] .hero-headline,
+  [data-lang="ta"] .hero-headline {
+    font-size: 56px !important;
+  }
+}
+
 /* ── Keyframes ── */
 @keyframes float {
   0%,
