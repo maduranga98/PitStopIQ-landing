@@ -136,7 +136,7 @@ export const TR: Record<Lang, Translation> = {
       "The moment you mark a service Done, your customer receives an SMS with what was done, the mileage, and when they're next due. Zero manual work.",
     feat3t: "Mileage-Based Reminder SMS",
     feat3d:
-      "Every night at 7:30 PM, PitstopIQ automatically identifies vehicles approaching their next service mileage and sends a reminder SMS. Customers come back.",
+      "PitstopIQ automatically identifies vehicles approaching their next service mileage and sends a reminder SMS. Customers come back.",
     feat4t: "Inventory Management",
     feat4d:
       "Track your oil, filters, and parts. Set low-stock thresholds. Stock is automatically deducted when you record parts used in a service.",
@@ -172,7 +172,7 @@ export const TR: Record<Lang, Translation> = {
     proCta: "Get Pro",
     popular: "MOST POPULAR",
     priceNote:
-      "Both plans include a 30-day free trial. No credit card required to start.",
+      "No credit card required to start.",
     pf1: "Customer & vehicle management",
     pf2: "Service job cards & status tracking",
     pf3: "Automatic completion SMS",
@@ -197,7 +197,7 @@ export const TR: Record<Lang, Translation> = {
     ctaHeading: "Ready to stop losing customers between services?",
     ctaSub: "Message us now on WhatsApp. Your account is live in 2 hours.",
     ctaBtn: "Start on WhatsApp →",
-    ctaNote: "Free 30-day trial · LKR 4,999/mo after · No credit card",
+    ctaNote: "LKR 4,999/mo · No credit card",
     footTagline: "SERVICE INTELLIGENCE",
     footDesc: "Digital operations for Sri Lankan vehicle service centers.",
     footCopy: "© 2026 Lumora Ventures PVT Ltd.",
@@ -244,7 +244,7 @@ export const TR: Record<Lang, Translation> = {
       "ඔබ සේවාව 'Done' ලෙස සලකුණු කළ විගස, ගනුදෙනුකරුට SMS ලැබේ — කළ දේ, කිලෝමීටර්, ඊළඟ සේවා දිනය. අතින් වැඩ නැත.",
     feat3t: "කිලෝමීටර් පාදක SMS මතක් කිරීම",
     feat3d:
-      "සෑම රාත්‍රිම 7:30 ට, PitstopIQ ඊළඟ සේවාවට ළඟාවන වාහන හඳුනා ගෙන SMS යවයි. ගනුදෙනුකරුවන් නැවත පැමිණේ.",
+      "PitstopIQ ඊළඟ සේවාවට ළඟාවන වාහන හඳුනා ගෙන SMS යවයි. ගනුදෙනුකරුවන් නැවත පැමිණේ.",
     feat4t: "ගබඩා කළමනාකරණය",
     feat4d:
       "ඔබේ තෙල්, ෆිල්ටර් සහ අමතර කොටස් හඹා යන්න. අඩු ගබඩා සීමා සකසන්න. සේවාවකදී භාවිත කෙරෙන තොග ස්වයංක්‍රීයව අඩු වේ.",
@@ -278,7 +278,7 @@ export const TR: Record<Lang, Translation> = {
     proSub: "/ මාසය · බැරෑරුම් සේවා මධ්‍යස්ථාන සඳහා",
     proCta: "Pro ලබාගන්න",
     popular: "වඩාත් ජනප්‍රිය",
-    priceNote: "දෙකෙහිම දින 30 නොමිලේ. ක්‍රෙඩිට් කාඩ් අවශ්‍ය නැත.",
+    priceNote: "ක්‍රෙඩිට් කාඩ් අවශ්‍ය නැත.",
     pf1: "ගනුදෙනුකරු සහ වාහන කළමනාකරණය",
     pf2: "සේවා ජොබ් කාඩ් සහ ස්ථිතිය",
     pf3: "ස්වයංක්‍රීය SMS",
@@ -303,7 +303,7 @@ export const TR: Record<Lang, Translation> = {
     ctaHeading: "සේවා අතර ගනුදෙනුකරුවන් අහිමි කිරීම නවත්වන්නද?",
     ctaSub: "WhatsApp හරහා දැන්ම ලියන්න. ගිණුම පැය 2 ක් ඇතුළත සක්‍රීය.",
     ctaBtn: "WhatsApp හරහා ආරම්භ කරන්න →",
-    ctaNote: "නොමිලේ දින 30 · ඉන්පසු LKR 4,999/මාසය · ක්‍රෙඩිට් කාඩ් නැත",
+    ctaNote: "LKR 4,999/මාසය · ක්‍රෙඩිට් කාඩ් නැත",
     footTagline: "සේවා බුද්ධිය",
     footDesc: "ශ්‍රී ලාංකික වාහන සේවා මධ්‍යස්ථාන සඳහා ඩිජිටල් මෙහෙයුම්.",
     footCopy: "© 2026 Lumora Ventures PVT Ltd.",
@@ -350,7 +350,7 @@ export const TR: Record<Lang, Translation> = {
       "சேவை முடிந்தவுடன், வாடிக்கையாளருக்கு SMS போகும் — என்ன செய்யப்பட்டது, கிலோமீட்டர், அடுத்த சேவை எப்போது.",
     feat3t: "கிலோமீட்டர் அடிப்படையிலான SMS நினைவூட்டல்",
     feat3d:
-      "தினமும் இரவு 7:30 மணிக்கு, PitstopIQ அடுத்த சேவைக்கு நெருங்கும் வாகனங்களுக்கு SMS அனுப்புகிறது.",
+      "PitstopIQ அடுத்த சேவைக்கு நெருங்கும் வாகனங்களுக்கு SMS அனுப்புகிறது.",
     feat4t: "சரக்கு மேலாண்மை",
     feat4d:
       "உங்கள் எண்ணெய், வடிகட்டிகள் மற்றும் பாகங்களை கண்காணியுங்கள். குறைந்த இருப்பு எல்லையை அமைக்கலாம்.",
@@ -386,7 +386,7 @@ export const TR: Record<Lang, Translation> = {
     proCta: "Pro எடுங்கள்",
     popular: "மிகவும் பிரபலமானது",
     priceNote:
-      "இரண்டு திட்டங்களிலும் 30 நாள் இலவச சோதனை. கிரெடிட் கார்டு தேவையில்லை.",
+      "கிரெடிட் கார்டு தேவையில்லை.",
     pf1: "வாடிக்கையாளர் & வாகன மேலாண்மை",
     pf2: "சேவை அட்டைகள் & நிலை கண்காணிப்பு",
     pf3: "தானியங்கி SMS",
@@ -412,7 +412,7 @@ export const TR: Record<Lang, Translation> = {
     ctaSub:
       "இப்போதே WhatsApp இல் செய்தி அனுப்புங்கள். 2 மணி நேரத்தில் கணக்கு தயார்.",
     ctaBtn: "WhatsApp இல் தொடங்கு →",
-    ctaNote: "இலவச 30 நாள் · பின்னர் LKR 4,999/மாதம் · கிரெடிட் கார்டு இல்லை",
+    ctaNote: "LKR 4,999/மாதம் · கிரெடிட் கார்டு இல்லை",
     footTagline: "சேவை நுண்ணறிவு",
     footDesc: "இலங்கை வாகன சேவை மையங்களுக்கான டிஜிட்டல் செயல்பாடுகள்.",
     footCopy: "© 2026 Lumora Ventures PVT Ltd.",
