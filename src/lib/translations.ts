@@ -519,7 +519,7 @@ export const FAQ_DATA: Record<Lang, Faq[]> = {
 };
 
 /** Central place to configure the WhatsApp business number (digits only, intl format). */
-export const WHATSAPP_NUMBER = "94XXXXXXXXX";
+export const WHATSAPP_NUMBER = "94711100800";
 
 export function waLink(message: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

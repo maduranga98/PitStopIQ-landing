@@ -92,12 +92,40 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "PitstopIQ",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    description,
+    url: siteUrl,
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "LKR",
+      availability: "https://schema.org/InStock",
+    },
+    provider: {
+      "@type": "Organization",
+      name: "PitstopIQ",
+      url: siteUrl,
+      email: "hello@pitstopiq.com",
+      telephone: "+94711100800",
+    },
+  };
+
   return (
     <html
       lang="en"
       className={`${inter.variable} ${barlow.variable} ${notoSinhala.variable} ${notoTamil.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

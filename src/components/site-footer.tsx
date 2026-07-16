@@ -79,7 +79,7 @@ export function SiteFooter() {
                 rel="noopener noreferrer"
                 className="footer-link"
               >
-                +94 XX XXX XXXX
+                +94 71 110 0800
               </a>
               <a href="mailto:hello@pitstopiq.com" className="footer-link">
                 hello@pitstopiq.com
