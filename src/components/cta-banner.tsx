@@ -32,8 +32,8 @@ export function CtaBanner() {
       />
       <div className="fade-in-up" style={{ maxWidth: 720, margin: "0 auto", position: "relative", zIndex: 1 }}>
         <h2
-          className="lh"
-          style={{ fontFamily: condensed, fontWeight: 800, fontSize: 52, lineHeight: 1, color: "#fff", marginBottom: 20 }}
+          className="lh cta-heading"
+          style={{ fontFamily: condensed, fontWeight: 800, color: "#fff", marginBottom: 20 }}
         >
           {t.ctaHeading}
         </h2>

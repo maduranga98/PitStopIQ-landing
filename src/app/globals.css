@@ -87,6 +87,29 @@ button {
   }
 }
 
+/* ── CTA banner heading (responsive; smaller for taller non-Latin scripts) ── */
+.cta-heading {
+  font-size: 38px;
+  line-height: 1.05;
+  overflow-wrap: break-word;
+}
+@media (min-width: 768px) {
+  .cta-heading {
+    font-size: 52px;
+  }
+}
+[data-lang="si"] .cta-heading,
+[data-lang="ta"] .cta-heading {
+  font-size: 28px !important;
+  line-height: 1.45 !important;
+}
+@media (min-width: 768px) {
+  [data-lang="si"] .cta-heading,
+  [data-lang="ta"] .cta-heading {
+    font-size: 40px !important;
+  }
+}
+
 /* ── Keyframes ── */
 @keyframes float {
   0%,
@@ -216,6 +239,35 @@ nav {
   border-radius: 8px;
   padding: 4px;
 }
+.lang-btn {
+  background: transparent;
+  color: #64748b;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.lang-btn-active {
+  background: #f97316;
+  color: #fff;
+  font-weight: 700;
+}
+/* Mobile menu variant: buttons share the row equally instead of
+   floating at the left of a full-width pill. */
+.lang-switcher-mobile {
+  margin-top: 16px;
+}
+.lang-switcher-mobile .lang-btn {
+  flex: 1;
+  padding: 10px 8px;
+  font-size: 14px;
+  text-align: center;
+}
 .mobile-nav-btn {
   display: none;
 }
@@ -309,6 +361,16 @@ nav {
 .btn-secondary:hover {
   transform: scale(1.04);
   background: rgba(249, 115, 22, 0.08);
+}
+/* Long Sinhala/Tamil labels must wrap instead of overflowing the viewport */
+@media (max-width: 640px) {
+  .btn-primary,
+  .btn-secondary {
+    white-space: normal;
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 /* ── Responsive grids ── */
