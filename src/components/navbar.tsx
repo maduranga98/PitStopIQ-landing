@@ -11,7 +11,13 @@ const LANGS: { code: Lang; label: string }[] = [
   { code: "ta", label: "தமி" },
 ];
 
-function LangSwitcher({ className = "" }: { className?: string }) {
+function LangSwitcher({
+  className = "",
+  onSelect,
+}: {
+  className?: string;
+  onSelect?: () => void;
+}) {
   const { lang, setLang } = useLanguage();
   return (
     <div className={className}>
@@ -21,20 +27,12 @@ function LangSwitcher({ className = "" }: { className?: string }) {
           <button
             key={code}
             type="button"
-            onClick={() => setLang(code)}
-            aria-pressed={active}
-            style={{
-              background: active ? "#F97316" : "transparent",
-              color: active ? "#fff" : "#64748B",
-              border: "none",
-              borderRadius: 5,
-              padding: "5px 10px",
-              fontSize: 12,
-              fontWeight: active ? 700 : 600,
-              cursor: "pointer",
-              transition: "background .2s",
-              fontFamily: "inherit",
+            onClick={() => {
+              setLang(code);
+              onSelect?.();
             }}
+            aria-pressed={active}
+            className={`lang-btn${active ? " lang-btn-active" : ""}`}
           >
             {label}
           </button>
@@ -171,10 +169,7 @@ export function Navbar() {
               {item.label}
             </a>
           ))}
-          <LangSwitcher
-            className="lang-switcher"
-            // styling for mobile row handled inline
-          />
+          <LangSwitcher className="lang-switcher lang-switcher-mobile" onSelect={closeMenu} />
           <a
             href={waLink("Hi, I'm interested in PitstopIQ!")}
             target="_blank"

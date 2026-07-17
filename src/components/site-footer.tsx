@@ -81,8 +81,8 @@ export function SiteFooter() {
               >
                 +94 71 110 0800
               </a>
-              <a href="mailto:hello@pitstopiq.com" className="footer-link">
-                hello@pitstopiq.com
+              <a href="mailto:info@lumoraventures.com" className="footer-link">
+                info@lumoraventures.com
               </a>
             </div>
           </div>
@@ -92,10 +92,10 @@ export function SiteFooter() {
               {t.footLegal}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <a href="#" className="lb footer-link">
+              <a href="/privacy" className="lb footer-link">
                 {t.footPrivacy}
               </a>
-              <a href="#" className="lb footer-link">
+              <a href="/terms" className="lb footer-link">
                 {t.footTerms}
               </a>
             </div>

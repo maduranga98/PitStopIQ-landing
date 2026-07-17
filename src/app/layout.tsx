@@ -110,7 +110,7 @@ export default function RootLayout({
       "@type": "Organization",
       name: "PitstopIQ",
       url: siteUrl,
-      email: "hello@pitstopiq.com",
+      email: "info@lumoraventures.com",
       telephone: "+94711100800",
     },
   };
