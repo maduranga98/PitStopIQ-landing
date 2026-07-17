@@ -64,9 +64,9 @@ export const metadata: Metadata = {
     locale: "en_LK",
     images: [
       {
-        url: "/og-image.png",
-        width: 1424,
-        height: 752,
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "PitstopIQ — Vehicle Service Center Management SaaS",
       },
     ],
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
   manifest: "/site.webmanifest",
   alternates: { canonical: siteUrl },
@@ -100,6 +100,7 @@ export default function RootLayout({
     operatingSystem: "Web",
     description,
     url: siteUrl,
+    image: `${siteUrl}/og-image.jpg`,
     offers: {
       "@type": "Offer",
       priceCurrency: "LKR",
