@@ -371,6 +371,16 @@ nav {
     justify-content: center;
     text-align: center;
   }
+  /* Sinhala/Tamil labels are much wider than the English ones; smaller
+     type keeps CTA buttons on a single line instead of wrapping around
+     the icon. !important is needed to beat per-button inline sizes. */
+  [data-lang="si"] .btn-primary,
+  [data-lang="si"] .btn-secondary,
+  [data-lang="ta"] .btn-primary,
+  [data-lang="ta"] .btn-secondary {
+    font-size: 14px !important;
+    padding: 15px 20px !important;
+  }
 }
 
 /* ── Responsive grids ── */
