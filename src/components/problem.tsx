@@ -21,22 +21,26 @@ function ProblemCard({
     <div
       className={`fade-in-up feature-card${delay ? ` ${delay}` : ""}`}
       style={{
-        background: "#162032",
-        border: "1px solid #1E3A5F",
-        borderRadius: 14,
+        background: "linear-gradient(180deg,#141f30,#111a29)",
+        border: "1px solid var(--border)",
+        borderRadius: 16,
         padding: 32,
+        boxShadow: "var(--shadow-card)",
       }}
     >
       <div
         style={{
           width: 52,
           height: 52,
-          background: "rgba(249,115,22,.1)",
-          borderRadius: 12,
+          background: "linear-gradient(180deg,rgba(249,115,22,.16),rgba(249,115,22,.07))",
+          border: "1px solid rgba(249,115,22,.18)",
+          borderRadius: 14,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           marginBottom: 20,
+          position: "relative",
+          zIndex: 1,
         }}
       >
         {icon}

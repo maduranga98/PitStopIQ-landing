@@ -30,24 +30,26 @@ function FeatureCard({
     <div
       className={`fade-in-up feature-card${delay ? ` ${delay}` : ""}`}
       style={{
-        background: "#0F1923",
-        border: "1px solid #1E3A5F",
-        borderLeft: "3px solid #F97316",
-        borderRadius: 14,
+        background: "linear-gradient(180deg,#111c2b,#0e1826)",
+        border: "1px solid var(--border)",
+        borderRadius: 16,
         padding: 28,
+        boxShadow: "var(--shadow-card)",
       }}
     >
-      <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
+      <div style={{ display: "flex", alignItems: "flex-start", gap: 16, position: "relative", zIndex: 1 }}>
         <div
           style={{
-            width: 44,
-            height: 44,
-            background: "rgba(249,115,22,.12)",
-            borderRadius: 10,
+            width: 46,
+            height: 46,
+            background: "linear-gradient(180deg,rgba(249,115,22,.18),rgba(249,115,22,.08))",
+            border: "1px solid rgba(249,115,22,.2)",
+            borderRadius: 12,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexShrink: 0,
+            color: "#F97316",
           }}
         >
           {icon}

@@ -77,28 +77,29 @@ export function Hero() {
         overflow: "hidden",
       }}
     >
+      {/* faint grid texture for depth */}
       <div
         style={{
           position: "absolute",
-          top: -80,
-          right: -120,
-          width: 800,
-          height: 800,
-          background:
-            "radial-gradient(ellipse at center,rgba(249,115,22,.08) 0%,transparent 65%)",
+          inset: 0,
+          backgroundImage:
+            "linear-gradient(rgba(148,163,184,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.05) 1px,transparent 1px)",
+          backgroundSize: "56px 56px",
+          maskImage: "radial-gradient(ellipse 90% 70% at 50% 0%,#000 20%,transparent 75%)",
+          WebkitMaskImage: "radial-gradient(ellipse 90% 70% at 50% 0%,#000 20%,transparent 75%)",
           pointerEvents: "none",
-          animation: "float 6s ease-in-out infinite",
         }}
       />
+      {/* single soft ambient glow, static */}
       <div
         style={{
           position: "absolute",
-          bottom: -100,
-          left: -100,
-          width: 500,
-          height: 500,
+          top: -160,
+          right: -80,
+          width: 720,
+          height: 720,
           background:
-            "radial-gradient(ellipse at center,rgba(249,115,22,.04) 0%,transparent 65%)",
+            "radial-gradient(ellipse at center,rgba(249,115,22,.07) 0%,transparent 60%)",
           pointerEvents: "none",
         }}
       />
@@ -109,15 +110,24 @@ export function Hero() {
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: 8,
-                background: "rgba(249,115,22,.1)",
-                border: "1px solid rgba(249,115,22,.28)",
-                borderLeft: "3px solid #F97316",
-                borderRadius: 4,
-                padding: "6px 14px",
+                gap: 9,
+                background: "rgba(249,115,22,.08)",
+                border: "1px solid rgba(249,115,22,.22)",
+                borderRadius: 9999,
+                padding: "6px 14px 6px 12px",
                 marginBottom: 28,
               }}
             >
+              <span
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: "50%",
+                  background: "#F97316",
+                  boxShadow: "0 0 8px rgba(249,115,22,.7)",
+                  flexShrink: 0,
+                }}
+              />
               <span
                 className="lb"
                 style={{
@@ -205,10 +215,10 @@ export function Hero() {
             <div
               style={{
                 background: "#0F1923",
-                border: "1px solid #1E3A5F",
+                border: "1px solid var(--border-strong)",
                 borderRadius: 18,
                 overflow: "hidden",
-                boxShadow: "0 32px 80px rgba(0,0,0,.6)",
+                boxShadow: "0 40px 80px -24px rgba(0,0,0,.75), inset 0 1px 0 rgba(255,255,255,.05)",
               }}
             >
               <div
