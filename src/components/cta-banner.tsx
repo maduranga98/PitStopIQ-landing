@@ -11,22 +11,35 @@ export function CtaBanner() {
   return (
     <section
       style={{
-        background: "linear-gradient(135deg,#070C14 0%,#1a0800 100%)",
+        background: "linear-gradient(135deg,#070C14 0%,#160a02 55%,#1f0c00 100%)",
         padding: "100px 24px",
         textAlign: "center",
         position: "relative",
         overflow: "hidden",
+        borderTop: "1px solid var(--border)",
       }}
     >
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage:
+            "linear-gradient(rgba(249,115,22,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.05) 1px,transparent 1px)",
+          backgroundSize: "48px 48px",
+          maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%,#000 10%,transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%,#000 10%,transparent 70%)",
+          pointerEvents: "none",
+        }}
+      />
       <div
         style={{
           position: "absolute",
           top: "50%",
           left: "50%",
           transform: "translate(-50%,-50%)",
-          width: 700,
-          height: 500,
-          background: "radial-gradient(ellipse at center,rgba(249,115,22,.1) 0%,transparent 65%)",
+          width: 760,
+          height: 520,
+          background: "radial-gradient(ellipse at center,rgba(249,115,22,.12) 0%,transparent 62%)",
           pointerEvents: "none",
         }}
       />

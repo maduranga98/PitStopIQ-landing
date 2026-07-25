@@ -122,7 +122,7 @@ export const TR: Record<Lang, Translation> = {
       "Customers misplace the small card with their oil grade and next-service mileage. No record, no reminder, no return visit.",
     probC2t: "Zero Automatic Reminders",
     probC2d:
-      "The only way to remind a customer is a manual phone call — which almost never happens during a busy day at the workshop.",
+      "The only way to remind a customer is a manual phone call, which almost never happens during a busy day at the workshop.",
     probC3t: "No Business Visibility",
     probC3d:
       "You can't answer: Which service makes the most revenue? Which technician is busiest? How much stock is left? The data is stuck in paper.",
@@ -130,7 +130,7 @@ export const TR: Record<Lang, Translation> = {
     featHeading: "Everything your service center needs, in one platform",
     feat1t: "Vehicle & Customer Management",
     feat1d:
-      "Register every vehicle with full specs: plate, make, model, year, oil brand, grade, and mileage. Every service is logged. Full history always available — even by QR scan.",
+      "Register every vehicle with full specs: plate, make, model, year, oil brand, grade, and mileage. Every service is logged. Full history always available, even by QR scan.",
     feat2t: "Automatic SMS After Service",
     feat2d:
       "The moment you mark a service Done, your customer receives an SMS with what was done, the mileage, and when they're next due. Zero manual work.",
@@ -151,7 +151,7 @@ export const TR: Record<Lang, Translation> = {
     hiw1l: "STEP 01",
     hiw1t: "We set up your account",
     hiw1d:
-      "Message us on WhatsApp. We send you the plan details, you pay, and your account is live within 2 hours — fully configured with your center name and SMS sender.",
+      "Message us on WhatsApp. We send you the plan details, you pay, and your account is live within 2 hours, fully configured with your center name and SMS sender.",
     hiw2l: "STEP 02",
     hiw2t: "Register your vehicles",
     hiw2d:
@@ -230,7 +230,7 @@ export const TR: Record<Lang, Translation> = {
       "ගනුදෙනුකරුවන් තෙල් ශ්‍රේණිය සහ ඊළඟ සේවා කිලෝමීටර් ඇති කාඩ්පත් නැති කරගනිති. වාර්තා නැත, මතක් කිරීමක් නැත, නැවත පැමිණීමක් නැත.",
     probC2t: "ස්වයංක්‍රීය මතක් කිරීම් නැත",
     probC2d:
-      "ගනුදෙනුකරුවෙකුට මතක් කිරීමට ඇති එකම ක්‍රමය අතින් දුරකථන ඇමතුමකි — කාර්යාලයේ කාර්යබහුල දිනයක් තුළ එය සිදු නොවේ.",
+      "ගනුදෙනුකරුවෙකුට මතක් කිරීමට ඇති එකම ක්‍රමය අතින් දුරකථන ඇමතුමකි. කාර්යාලයේ කාර්යබහුල දිනයක් තුළ එය සිදු නොවේ.",
     probC3t: "ව්‍යාපාරය පිළිබඳ පැහැදිලි දත්ත නොමැත",
     probC3d:
       "කුමන සේවාව වැඩිම ආදායම් දෙනවාද? කුමන තාක්ෂණිකයා වැඩිම කාර්යබහුලද? තොග කොපමණ ද? ඒ සියල්ල කඩදාසිවල සිරවී ඇත.",
@@ -241,7 +241,7 @@ export const TR: Record<Lang, Translation> = {
       "සෑම වාහනයක්ම සම්පූර්ණ තොරතුරු සමඟ ලියාපදිංචි කරන්න. සෑම සේවාවක්ම සටහන් වේ. QR කේතය ස්කෑන් කිරීමෙන් සම්පූර්ණ ඉතිහාසය ලබාගත හැකිය.",
     feat2t: "සේවාවෙන් පසු ස්වයංක්‍රීය SMS",
     feat2d:
-      "ඔබ සේවාව 'Done' ලෙස සලකුණු කළ විගස, ගනුදෙනුකරුට SMS ලැබේ — කළ දේ, කිලෝමීටර්, ඊළඟ සේවා දිනය. අතින් වැඩ නැත.",
+      "ඔබ සේවාව 'Done' ලෙස සලකුණු කළ විගස, ගනුදෙනුකරුට SMS ලැබේ: කළ දේ, කිලෝමීටර්, ඊළඟ සේවා දිනය. අතින් වැඩ නැත.",
     feat3t: "කිලෝමීටර් පාදක SMS මතක් කිරීම",
     feat3d:
       "PitstopIQ ඊළඟ සේවාවට ළඟාවන වාහන හඳුනා ගෙන SMS යවයි. ගනුදෙනුකරුවන් නැවත පැමිණේ.",
@@ -259,7 +259,7 @@ export const TR: Record<Lang, Translation> = {
     hiw1l: "පියවර 01",
     hiw1t: "ඔබේ ගිණුම සකසනවා",
     hiw1d:
-      "WhatsApp හරහා අපට ලියන්න. ඔබ ගෙවීමෙන් පැය 2 ක් ඇතුළත ගිණුම සක්‍රීය වේ — ඔබේ මධ්‍යස්ථාන නමින් සම්පූර්ණයෙන් වින්‍යාස කෙරේ.",
+      "WhatsApp හරහා අපට ලියන්න. ඔබ ගෙවීමෙන් පැය 2 ක් ඇතුළත ගිණුම සක්‍රීය වේ. ඔබේ මධ්‍යස්ථාන නමින් සම්පූර්ණයෙන් වින්‍යාස කෙරේ.",
     hiw2l: "පියවර 02",
     hiw2t: "වාහන ලියාපදිංචි කරන්න",
     hiw2d:
@@ -336,7 +336,7 @@ export const TR: Record<Lang, Translation> = {
       "வாடிக்கையாளர்கள் சேவை அட்டையை அடிக்கடி இழந்து விடுகின்றனர். பதிவில்லை, நினைவூட்டல் இல்லை, திரும்பி வர மாட்டார்கள்.",
     probC2t: "தானியங்கி நினைவூட்டல்கள் இல்லை",
     probC2d:
-      "வாடிக்கையாளரை நினைவூட்ட ஒரே வழி கையால் போன் செய்வது — பிஸியான நாளில் இது நடக்காது.",
+      "வாடிக்கையாளரை நினைவூட்ட ஒரே வழி கையால் போன் செய்வது. பிஸியான நாளில் இது நடக்காது.",
     probC3t: "வணிகத் தகவல்களில் தெளிவான பார்வை இல்லை",
     probC3d:
       "எந்த சேவை அதிக வருமானம் தருகிறது? எந்த தொழிலாளி பிஸியாக உள்ளார்? தரவு காகிதத்தில் சிக்கியுள்ளது.",
@@ -347,7 +347,7 @@ export const TR: Record<Lang, Translation> = {
       "ஒவ்வொரு வாகனத்தையும் முழு விவரங்களுடன் பதிவு செய்யுங்கள். QR ஸ்கேன் மூலம் வரலாறு கிடைக்கும்.",
     feat2t: "சேவைக்கு பின் தானியங்கி SMS",
     feat2d:
-      "சேவை முடிந்தவுடன், வாடிக்கையாளருக்கு SMS போகும் — என்ன செய்யப்பட்டது, கிலோமீட்டர், அடுத்த சேவை எப்போது.",
+      "சேவை முடிந்தவுடன், வாடிக்கையாளருக்கு SMS போகும்: என்ன செய்யப்பட்டது, கிலோமீட்டர், அடுத்த சேவை எப்போது.",
     feat3t: "கிலோமீட்டர் அடிப்படையிலான SMS நினைவூட்டல்",
     feat3d:
       "PitstopIQ அடுத்த சேவைக்கு நெருங்கும் வாகனங்களுக்கு SMS அனுப்புகிறது.",
@@ -429,11 +429,7 @@ export const FAQ_DATA: Record<Lang, Faq[]> = {
   en: [
     {
       q: "How do I get started?",
-      a: "Message us on WhatsApp — the button at the top of the page. We'll send you plan details and payment info. Your account is live within 2 hours of payment.",
-    },
-    {
-      q: "Which networks does the SMS work on?",
-      a: "We use Dialog Axiata's eSMS platform. Messages are delivered to all Sri Lankan networks: Dialog, Mobitel, Hutch, Airtel, and Lanka Bell.",
+      a: "Message us on WhatsApp using the button at the top of the page. We'll send you plan details and payment info. Your account is live within 2 hours of payment.",
     },
     {
       q: "Can my technicians also log in?",
@@ -462,10 +458,6 @@ export const FAQ_DATA: Record<Lang, Faq[]> = {
       a: "WhatsApp හරහා අපට ලියන්න. ඔබ ගෙවීමෙන් පසු පැය 2 ක් ඇතුළත ගිණුම සක්‍රීය වේ.",
     },
     {
-      q: "SMS ක්‍රියා කරන ජාල මොනවාද?",
-      a: "Dialog Axiata eSMS වේදිකාව භාවිතා කරයි. Dialog, Mobitel, Hutch, Airtel සහ Lanka Bell ජාල වලට ලැබේ.",
-    },
-    {
       q: "තාක්ෂණිකයන්ට පිවිසිය හැකිද?",
       a: "ඔව්. කළමනාකරු, කාර්මික, මුදල් අයකැමි සහ පිළිගැනීමේ නිලධාරී ලෙස සේවකයන් එක් කළ හැකිය. එක් එක් කෙනාට ඔවුන්ට අදාළ දෑ පමණක් දිස් වේ.",
     },
@@ -490,10 +482,6 @@ export const FAQ_DATA: Record<Lang, Faq[]> = {
     {
       q: "எவ்வாறு தொடங்குவது?",
       a: "WhatsApp இல் செய்தி அனுப்புங்கள். நீங்கள் பணம் செலுத்திய 2 மணி நேரத்திற்குள் கணக்கு செயலில் இருக்கும்.",
-    },
-    {
-      q: "SMS எந்த நெட்வொர்க்கில் வேலை செய்கிறது?",
-      a: "Dialog Axiata eSMS தளத்தை பயன்படுத்துகிறோம். Dialog, Mobitel, Hutch, Airtel, Lanka Bell நெட்வொர்க்கில் SMS கிடைக்கும்.",
     },
     {
       q: "என் தொழிலாளிகள் உள்நுழையலாமா?",

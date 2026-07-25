@@ -42,7 +42,7 @@ export function Pricing() {
           {/* Basic */}
           <div
             className="fade-in-up pricing-card pricing-card-basic"
-            style={{ background: "#0F1923", border: "1px solid #1E3A5F", borderRadius: 20, padding: 40, position: "relative" }}
+            style={{ background: "linear-gradient(180deg,#101b2a,#0d1725)", border: "1px solid var(--border)", borderRadius: 20, padding: 40, position: "relative", boxShadow: "var(--shadow-card)" }}
           >
             <div
               className="lb"

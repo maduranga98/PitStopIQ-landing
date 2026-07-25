@@ -33,7 +33,7 @@ const notoTamil = Noto_Sans_Tamil({
 });
 
 const siteUrl = "https://pitstopiq.com";
-const title = "PitstopIQ — Vehicle Service Center Management SaaS for Sri Lanka";
+const title = "PitstopIQ - Vehicle Service Center Management SaaS for Sri Lanka";
 const description =
   "PitstopIQ replaces paper service cards with a digital platform that tracks every vehicle, sends automatic SMS reminders, and gives you full visibility of your business.";
 
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "PitstopIQ — Vehicle Service Center Management SaaS",
+        alt: "PitstopIQ - Vehicle Service Center Management SaaS",
       },
     ],
   },
