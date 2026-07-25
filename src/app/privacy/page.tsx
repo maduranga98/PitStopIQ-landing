@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — PitstopIQ",
+  title: "Privacy Policy - PitstopIQ",
   description:
     "How PitstopIQ collects, uses, and protects data for vehicle service centers and their customers in Sri Lanka.",
   alternates: { canonical: "https://pitstopiq.com/privacy" },
@@ -42,14 +42,14 @@ export default function PrivacyPolicyPage() {
         {
           heading: "SMS Communications",
           body: [
-            "SMS messages are sent to vehicle owners only in connection with services performed at a subscribing service center — for example, a completion notice or a reminder that the next service is due. We do not use these phone numbers for marketing unrelated to the service center, and we do not sell them to third parties.",
+            "SMS messages are sent to vehicle owners only in connection with services performed at a subscribing service center, for example, a completion notice or a reminder that the next service is due. We do not use these phone numbers for marketing unrelated to the service center, and we do not sell them to third parties.",
             "Vehicle owners who no longer wish to receive reminders can ask their service center to update or remove their record.",
           ],
         },
         {
           heading: "Data Sharing",
           body: [
-            "We do not sell personal data. We share data only with service providers necessary to run PitstopIQ — such as SMS delivery (Dialog Axiata eSMS), cloud hosting, and payment processing — and only to the extent required to deliver the service. Each service center can access only its own data (or its own branches on multi-branch plans).",
+            "We do not sell personal data. We share data only with service providers necessary to run PitstopIQ, such as SMS delivery (Dialog Axiata eSMS), cloud hosting, and payment processing, and only to the extent required to deliver the service. Each service center can access only its own data (or its own branches on multi-branch plans).",
             "We may disclose information if required by law or to protect our legal rights.",
           ],
         },

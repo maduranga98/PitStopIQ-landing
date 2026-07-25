@@ -105,7 +105,7 @@ export function Features() {
           <FeatureCard icon={<MessageIcon width={22} height={22} />} title={t.feat2t} desc={t.feat2d} delay="fd1" />
           <FeatureCard icon={<ClockIcon width={22} height={22} />} title={t.feat3t} desc={t.feat3d} />
           <FeatureCard icon={<BoxIcon width={22} height={22} />} title={t.feat4t} desc={t.feat4d} pro delay="fd1" />
-          <FeatureCard icon={<FileIcon width={22} height={22} />} title={t.feat5t} desc={t.feat5d} pro />
+          <FeatureCard icon={<FileIcon width={22} height={22} />} title={t.feat5t} desc={t.feat5d} />
           <FeatureCard icon={<TrendingUpIcon width={22} height={22} />} title={t.feat6t} desc={t.feat6d} pro delay="fd1" />
         </div>
       </div>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — PitstopIQ",
+  title: "Terms of Service - PitstopIQ",
   description:
     "The terms that govern use of the PitstopIQ vehicle service center management platform by subscribing service centers in Sri Lanka.",
   alternates: { canonical: "https://pitstopiq.com/terms" },
@@ -30,7 +30,7 @@ export default function TermsOfServicePage() {
         {
           heading: "Subscriptions & Payment",
           body: [
-            "PitstopIQ is billed monthly in Sri Lankan Rupees, in advance. There is no setup fee and no long-term contract; you may cancel at any time and your access continues until the end of the paid period. Prices for the Basic and Pro plans are listed on our website and may change with prior notice — existing subscribers will be notified before any price change applies to them.",
+            "PitstopIQ is billed monthly in Sri Lankan Rupees, in advance. There is no setup fee and no long-term contract; you may cancel at any time and your access continues until the end of the paid period. Prices for the Basic and Pro plans are listed on our website and may change with prior notice. Existing subscribers will be notified before any price change applies to them.",
           ],
         },
         {

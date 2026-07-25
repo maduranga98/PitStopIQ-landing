@@ -222,7 +222,7 @@ export function Hero() {
                 }}
               >
                 <span style={{ ...headingStyle, fontSize: 15, color: "#fff", letterSpacing: ".02em" }}>
-                  Active Services — Today
+                  Active Services Today
                 </span>
                 <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                   <div
