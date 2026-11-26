@@ -3,13 +3,11 @@
 import { useLanguage } from "@/lib/language-context";
 import { waLink } from "@/lib/translations";
 
-const condensed = "'Barlow Condensed',sans-serif";
-
 function FeatureLine({ label, included }: { label: string; included: boolean }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-      <span className={included ? "check-yes" : "check-no"}>{included ? "✓" : "✗"}</span>
-      <span className="lb" style={{ color: included ? "#94A3B8" : "#374151", fontSize: 14 }}>
+      <span className={included ? "check-yes" : "check-no"}>{included ? "✓" : "✕"}</span>
+      <span className="lb" style={{ opacity: included ? 1 : 0.55, fontSize: 14 }}>
         {label}
       </span>
     </div>
@@ -24,53 +22,30 @@ export function Pricing() {
   const proFeatures = [t.pp1, t.pp2, t.pp3, t.pp4, t.pp5, t.pp6, t.pp7, t.pp8, t.pp9];
 
   return (
-    <section id="pricing" style={{ background: "#0B1120", padding: "96px 24px" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+    <section id="pricing" className="section" style={{ background: "var(--bg-soft)" }}>
+      <div className="container">
         <div className="fade-in-up" style={{ textAlign: "center", marginBottom: 56 }}>
-          <div className="section-label lb" style={{ justifyContent: "center" }}>
+          <div className="section-label lb" style={{ color: "#db2777", background: "rgba(236,72,153,.1)" }}>
             {t.priceLabel}
           </div>
-          <h2 className="lh" style={{ fontFamily: condensed, fontWeight: 800, fontSize: 44, color: "#fff", marginBottom: 12 }}>
-            {t.priceHeading}
-          </h2>
-          <p className="lb" style={{ color: "#94A3B8", fontSize: 16 }}>
-            {t.priceSub}
-          </p>
+          <h2 className="h2 lh">{t.priceHeading}</h2>
+          <p className="section-sub lb">{t.priceSub}</p>
         </div>
 
-        <div className="pricing-grid" style={{ maxWidth: 900, margin: "0 auto 32px" }}>
-          {/* Basic */}
-          <div
-            className="fade-in-up pricing-card pricing-card-basic"
-            style={{ background: "linear-gradient(180deg,#101b2a,#0d1725)", border: "1px solid var(--border)", borderRadius: 20, padding: 40, position: "relative", boxShadow: "var(--shadow-card)" }}
-          >
-            <div
-              className="lb"
-              style={{
-                fontFamily: condensed,
-                fontWeight: 700,
-                fontSize: 13,
-                color: "#94A3B8",
-                letterSpacing: ".16em",
-                textTransform: "uppercase",
-                marginBottom: 16,
-              }}
-            >
+        <div className="pricing-grid" style={{ maxWidth: 920, margin: "0 auto 32px" }}>
+          <div className="fade-in-up pricing-card pricing-basic">
+            <div className="lb" style={{ fontWeight: 800, fontSize: 13, color: "var(--blue)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 16 }}>
               {t.basicLabel}
             </div>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 2, marginBottom: 6 }}>
-              <span style={{ fontFamily: condensed, fontWeight: 800, fontSize: 52, color: "#fff", lineHeight: 1 }}>
-                LKR 4,999
-              </span>
-            </div>
-            <div className="lb" style={{ color: "#64748B", fontSize: 14, marginBottom: 28 }}>
+            <div className="price lh">LKR 4,999</div>
+            <div className="lb" style={{ color: "var(--ink-dim)", fontSize: 14, margin: "8px 0 28px" }}>
               {t.basicSub}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 36 }}>
               {basicIncluded.map((f) => (
                 <FeatureLine key={f} label={f} included />
               ))}
-              <div style={{ height: 1, background: "#1E3A5F", margin: "4px 0" }} />
+              <div style={{ height: 1, background: "var(--line)", margin: "4px 0" }} />
               {basicExcluded.map((f) => (
                 <FeatureLine key={f} label={f} included={false} />
               ))}
@@ -80,56 +55,37 @@ export function Pricing() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary lb"
-              style={{ width: "100%", justifyContent: "center", fontSize: 15 }}
+              style={{ width: "100%" }}
             >
               {t.basicCta}
             </a>
           </div>
 
-          {/* Pro */}
-          <div
-            className="fade-in-up fd1 pricing-card pricing-card-pro pricing-pro-border"
-            style={{ borderRadius: 20, padding: 40, position: "relative", overflow: "hidden" }}
-          >
-            <div className="pro-shimmer" />
+          <div className="fade-in-up fd1 pricing-card pricing-pro">
             <div
               className="lb"
               style={{
                 position: "absolute",
-                top: 20,
-                right: 20,
-                background: "#F97316",
-                color: "#fff",
-                fontSize: 10,
-                fontWeight: 700,
-                letterSpacing: ".1em",
-                padding: "4px 12px",
-                borderRadius: 20,
+                top: -14,
+                right: 28,
+                background: "#ffe08a",
+                color: "#7c2d12",
+                fontSize: 11,
+                fontWeight: 800,
+                letterSpacing: ".08em",
+                padding: "6px 14px",
+                borderRadius: 999,
                 textTransform: "uppercase",
+                boxShadow: "0 8px 18px -6px rgba(0,0,0,.3)",
               }}
             >
-              {t.popular}
+              ★ {t.popular}
             </div>
-            <div
-              className="lb"
-              style={{
-                fontFamily: condensed,
-                fontWeight: 700,
-                fontSize: 13,
-                color: "#F97316",
-                letterSpacing: ".16em",
-                textTransform: "uppercase",
-                marginBottom: 16,
-              }}
-            >
+            <div className="lb" style={{ fontWeight: 800, fontSize: 13, color: "#ffe08a", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 16 }}>
               {t.proLabel}
             </div>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 2, marginBottom: 6 }}>
-              <span style={{ fontFamily: condensed, fontWeight: 800, fontSize: 52, color: "#fff", lineHeight: 1 }}>
-                LKR 7,999
-              </span>
-            </div>
-            <div className="lb" style={{ color: "#64748B", fontSize: 14, marginBottom: 28 }}>
+            <div className="price lh">LKR 7,999</div>
+            <div className="lb" style={{ color: "rgba(255,255,255,.8)", fontSize: 14, margin: "8px 0 28px" }}>
               {t.proSub}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 36 }}>
@@ -141,15 +97,15 @@ export function Pricing() {
               href={waLink("Hi, I'm interested in PitstopIQ Pro!")}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary lb"
-              style={{ width: "100%", justifyContent: "center", fontSize: 15 }}
+              className="btn-white lb"
+              style={{ width: "100%" }}
             >
               {t.proCta}
             </a>
           </div>
         </div>
 
-        <p className="lb" style={{ textAlign: "center", color: "#64748B", fontSize: 13 }}>
+        <p className="lb" style={{ textAlign: "center", color: "var(--ink-dim)", fontSize: 13 }}>
           {t.priceNote}
         </p>
       </div>

@@ -57,20 +57,7 @@ export function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000,
-        background: "rgba(11,17,32,0.92)",
-        backdropFilter: "blur(14px)",
-        WebkitBackdropFilter: "blur(14px)",
-        borderBottom: scrolled ? "1px solid #1E3A5F" : "1px solid transparent",
-        transition: "border-color 0.3s ease",
-      }}
-    >
+    <nav className={`site-nav${scrolled ? " scrolled" : ""}`}>
       <div
         style={{
           maxWidth: 1280,
@@ -133,17 +120,17 @@ export function Navbar() {
             alignItems: "center",
           }}
         >
-          <span style={{ display: "block", width: 22, height: 2, background: "#fff", borderRadius: 1 }} />
-          <span style={{ display: "block", width: 22, height: 2, background: "#fff", borderRadius: 1 }} />
-          <span style={{ display: "block", width: 22, height: 2, background: "#fff", borderRadius: 1 }} />
+          <span style={{ display: "block", width: 22, height: 2, background: "#0f1b3d", borderRadius: 1 }} />
+          <span style={{ display: "block", width: 22, height: 2, background: "#0f1b3d", borderRadius: 1 }} />
+          <span style={{ display: "block", width: 22, height: 2, background: "#0f1b3d", borderRadius: 1 }} />
         </button>
       </div>
 
       <div
         style={{
           display: menuOpen ? "block" : "none",
-          background: "#0F1923",
-          borderTop: "1px solid #1E3A5F",
+          background: "#fff",
+          borderTop: "1px solid #e7e9f5",
         }}
       >
         <div style={{ padding: "8px 24px 20px", display: "flex", flexDirection: "column" }}>
@@ -157,14 +144,7 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               onClick={closeMenu}
-              className="lb"
-              style={{
-                color: "#94A3B8",
-                fontSize: 16,
-                fontWeight: 500,
-                padding: "14px 0",
-                borderBottom: "1px solid rgba(30,58,95,.4)",
-              }}
+              className="lb mobile-menu-link"
             >
               {item.label}
             </a>

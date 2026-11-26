@@ -10,7 +10,7 @@ export function WhatsAppIcon(props: SVGProps<SVGSVGElement>) {
 
 const strokeProps: SVGProps<SVGSVGElement> = {
   fill: "none",
-  stroke: "#F97316",
+  stroke: "currentColor",
   strokeWidth: 1.75,
   strokeLinecap: "round",
   strokeLinejoin: "round",
