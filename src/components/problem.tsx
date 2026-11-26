@@ -36,15 +36,15 @@ export function Problem() {
     <section className="section" style={{ background: "#fff", paddingTop: 56 }}>
       <div className="container">
         <div className="fade-in-up" style={{ textAlign: "center", maxWidth: 680, margin: "0 auto" }}>
-          <div className="section-label lb" style={{ color: "var(--orange-deep)", background: "rgba(255,107,26,.1)" }}>
+          <div className="section-label lb">
             {t.probLabel}
           </div>
           <h2 className="h2 lh">{t.probHeading}</h2>
         </div>
         <div className="problem-grid" style={{ marginTop: 52 }}>
-          <ProblemCard icon={<FileIcon width={26} height={26} />} title={t.probC1t} desc={t.probC1d} color="#ff6b1a" />
-          <ProblemCard icon={<BellOffIcon width={26} height={26} />} title={t.probC2t} desc={t.probC2d} color="#ec4899" delay="fd1" />
-          <ProblemCard icon={<BarChartIcon width={26} height={26} />} title={t.probC3t} desc={t.probC3d} color="#7c3aed" delay="fd2" />
+          <ProblemCard icon={<FileIcon width={26} height={26} />} title={t.probC1t} desc={t.probC1d} color="#f97316" />
+          <ProblemCard icon={<BellOffIcon width={26} height={26} />} title={t.probC2t} desc={t.probC2d} color="#2563eb" delay="fd1" />
+          <ProblemCard icon={<BarChartIcon width={26} height={26} />} title={t.probC3t} desc={t.probC3d} color="#4f46e5" delay="fd2" />
         </div>
       </div>
     </section>

@@ -10,14 +10,12 @@ export function Hero() {
   return (
     <section className="hero">
       <div className="hero-dots" />
-      <div className="hero-blob" style={{ top: -120, left: -120, width: 420, height: 420, background: "rgba(59,130,246,.55)" }} />
-      <div className="hero-blob" style={{ bottom: 40, right: -100, width: 460, height: 460, background: "rgba(255,160,40,.5)", animationDelay: "-5s" }} />
 
       <div className="container" style={{ zIndex: 1 }}>
         <div className="hero-center">
           <div>
             <div className="hero-pill hero-a1 lb">
-              <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#4ade80", flexShrink: 0 }} />
+              <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#f97316", flexShrink: 0 }} />
               {t.heroEyebrow}
             </div>
             <h1 className="hero-headline lh hero-a2">
@@ -31,7 +29,7 @@ export function Hero() {
                 href={waLink("Hi, I'm interested in PitstopIQ!")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-white lb"
+                className="btn-primary lb"
                 style={{ fontSize: 16, padding: "16px 32px" }}
               >
                 <WhatsAppIcon width={18} height={18} />
@@ -42,8 +40,8 @@ export function Hero() {
               </a>
             </div>
             <div className="trust-stats hero-a4 lb">
-              <span className="trust-chip">✦ {t.heroStat1}</span>
-              <span className="trust-chip">✓ {t.heroStat2}</span>
+              <span className="trust-chip">{t.heroStat1}</span>
+              <span className="trust-chip">{t.heroStat2}</span>
             </div>
           </div>
 

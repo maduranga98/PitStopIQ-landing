@@ -20,7 +20,7 @@ export function LegalPage({
   sections: LegalSection[];
 }) {
   return (
-    <div style={{ background: "#f6f7ff", minHeight: "100vh" }}>
+    <div style={{ background: "#f6f8fc", minHeight: "100vh" }}>
       <header
         style={{
           position: "sticky",
@@ -125,7 +125,7 @@ export function LegalPage({
         >
           <p style={{ marginBottom: 4 }}>
             Questions? Contact us at{" "}
-            <a href="mailto:info@lumoraventures.com" style={{ color: "#7c3aed" }}>
+            <a href="mailto:info@lumoraventures.com" style={{ color: "#ea580c" }}>
               info@lumoraventures.com
             </a>{" "}
             or on WhatsApp at{" "}
@@ -133,7 +133,7 @@ export function LegalPage({
               href="https://wa.me/94711100800"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#7c3aed" }}
+              style={{ color: "#ea580c" }}
             >
               +94 71 110 0800
             </a>

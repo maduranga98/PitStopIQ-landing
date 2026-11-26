@@ -12,7 +12,7 @@ export function Faq() {
     <section id="faq" className="section" style={{ background: "#fff" }}>
       <div style={{ maxWidth: 760, margin: "0 auto" }}>
         <div className="fade-in-up" style={{ marginBottom: 44, textAlign: "center" }}>
-          <div className="section-label lb" style={{ color: "#2563eb", background: "rgba(59,130,246,.1)" }}>
+          <div className="section-label lb">
             {t.faqLabel}
           </div>
           <h2 className="h2 lh">{t.faqHeading}</h2>
@@ -31,7 +31,7 @@ export function Faq() {
                       transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
                       transition: "transform 0.3s ease",
                       flexShrink: 0,
-                      color: isOpen ? "#7c3aed" : "#7b86a6",
+                      color: isOpen ? "#2563eb" : "#7b86a6",
                     }}
                   />
                 </button>
