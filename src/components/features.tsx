@@ -43,12 +43,12 @@ export function Features() {
           <h2 className="h2 lh">{t.featHeading}</h2>
         </div>
         <div className="features-grid">
-          <FeatureCard icon={<UsersIcon width={24} height={24} />} title={t.feat1t} desc={t.feat1d} color="#3b82f6" />
-          <FeatureCard icon={<MessageIcon width={24} height={24} />} title={t.feat2t} desc={t.feat2d} color="#22c55e" delay="fd1" />
-          <FeatureCard icon={<ClockIcon width={24} height={24} />} title={t.feat3t} desc={t.feat3d} color="#f59e0b" delay="fd2" />
-          <FeatureCard icon={<BoxIcon width={24} height={24} />} title={t.feat4t} desc={t.feat4d} color="#ec4899" pro />
-          <FeatureCard icon={<FileIcon width={24} height={24} />} title={t.feat5t} desc={t.feat5d} color="#14b8a6" delay="fd1" />
-          <FeatureCard icon={<TrendingUpIcon width={24} height={24} />} title={t.feat6t} desc={t.feat6d} color="#7c3aed" pro delay="fd2" />
+          <FeatureCard icon={<UsersIcon width={24} height={24} />} title={t.feat1t} desc={t.feat1d} color="#2563eb" />
+          <FeatureCard icon={<MessageIcon width={24} height={24} />} title={t.feat2t} desc={t.feat2d} color="#0d9488" delay="fd1" />
+          <FeatureCard icon={<ClockIcon width={24} height={24} />} title={t.feat3t} desc={t.feat3d} color="#d97706" delay="fd2" />
+          <FeatureCard icon={<BoxIcon width={24} height={24} />} title={t.feat4t} desc={t.feat4d} color="#f97316" pro />
+          <FeatureCard icon={<FileIcon width={24} height={24} />} title={t.feat5t} desc={t.feat5d} color="#0284c7" delay="fd1" />
+          <FeatureCard icon={<TrendingUpIcon width={24} height={24} />} title={t.feat6t} desc={t.feat6d} color="#4f46e5" pro delay="fd2" />
         </div>
       </div>
     </section>

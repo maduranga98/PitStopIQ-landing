@@ -46,7 +46,7 @@ export function HowItWorks() {
     <section id="how-it-works" className="section" style={{ background: "#fff" }}>
       <div className="container">
         <div className="fade-in-up" style={{ textAlign: "center", marginBottom: 64 }}>
-          <div className="section-label lb" style={{ color: "#0d9488", background: "rgba(20,184,166,.12)" }}>
+          <div className="section-label lb">
             {t.hiwLabel}
           </div>
           <h2 className="h2 lh">{t.hiwHeading}</h2>
@@ -54,9 +54,9 @@ export function HowItWorks() {
         <div style={{ position: "relative" }}>
           <div className="step-line" />
           <div className="steps-grid">
-            <Step icon={<ChatBubbleIcon width={30} height={30} />} label={t.hiw1l} title={t.hiw1t} desc={t.hiw1d} color="#3b82f6" soft="rgba(59,130,246,.15)" />
-            <Step icon={<ClipboardIcon width={30} height={30} />} label={t.hiw2l} title={t.hiw2t} desc={t.hiw2d} color="#ec4899" soft="rgba(236,72,153,.15)" delay="fd1" />
-            <Step icon={<ZapIcon width={30} height={30} />} label={t.hiw3l} title={t.hiw3t} desc={t.hiw3d} color="#ff6b1a" soft="rgba(255,107,26,.17)" delay="fd2" />
+            <Step icon={<ChatBubbleIcon width={30} height={30} />} label={t.hiw1l} title={t.hiw1t} desc={t.hiw1d} color="#2563eb" soft="" />
+            <Step icon={<ClipboardIcon width={30} height={30} />} label={t.hiw2l} title={t.hiw2t} desc={t.hiw2d} color="#4f46e5" soft="" delay="fd1" />
+            <Step icon={<ZapIcon width={30} height={30} />} label={t.hiw3l} title={t.hiw3t} desc={t.hiw3d} color="#f97316" soft="" delay="fd2" />
           </div>
         </div>
       </div>

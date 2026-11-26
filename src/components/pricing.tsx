@@ -25,7 +25,7 @@ export function Pricing() {
     <section id="pricing" className="section" style={{ background: "var(--bg-soft)" }}>
       <div className="container">
         <div className="fade-in-up" style={{ textAlign: "center", marginBottom: 56 }}>
-          <div className="section-label lb" style={{ color: "#db2777", background: "rgba(236,72,153,.1)" }}>
+          <div className="section-label lb">
             {t.priceLabel}
           </div>
           <h2 className="h2 lh">{t.priceHeading}</h2>
@@ -34,7 +34,7 @@ export function Pricing() {
 
         <div className="pricing-grid" style={{ maxWidth: 920, margin: "0 auto 32px" }}>
           <div className="fade-in-up pricing-card pricing-basic">
-            <div className="lb" style={{ fontWeight: 800, fontSize: 13, color: "var(--blue)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 16 }}>
+            <div className="lb" style={{ fontWeight: 800, fontSize: 13, color: "var(--ink-soft)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 16 }}>
               {t.basicLabel}
             </div>
             <div className="price lh">LKR 4,999</div>
@@ -68,8 +68,8 @@ export function Pricing() {
                 position: "absolute",
                 top: -14,
                 right: 28,
-                background: "#ffe08a",
-                color: "#7c2d12",
+                background: "#f97316",
+                color: "#fff",
                 fontSize: 11,
                 fontWeight: 800,
                 letterSpacing: ".08em",
@@ -79,9 +79,9 @@ export function Pricing() {
                 boxShadow: "0 8px 18px -6px rgba(0,0,0,.3)",
               }}
             >
-              ★ {t.popular}
+              {t.popular}
             </div>
-            <div className="lb" style={{ fontWeight: 800, fontSize: 13, color: "#ffe08a", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 16 }}>
+            <div className="lb" style={{ fontWeight: 800, fontSize: 13, color: "#fb923c", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 16 }}>
               {t.proLabel}
             </div>
             <div className="price lh">LKR 7,999</div>
@@ -97,7 +97,7 @@ export function Pricing() {
               href={waLink("Hi, I'm interested in PitstopIQ Pro!")}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-white lb"
+              className="btn-primary lb"
               style={{ width: "100%" }}
             >
               {t.proCta}
