@@ -1,59 +1,31 @@
 "use client";
 
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { BarChartIcon, BellOffIcon, FileIcon } from "./icons";
-
-const condensed = "'Barlow Condensed',sans-serif";
 
 function ProblemCard({
   icon,
   title,
   desc,
+  color,
   delay,
 }: {
   icon: ReactNode;
   title: string;
   desc: string;
+  color: string;
   delay?: string;
 }) {
   return (
-    <div
-      className={`fade-in-up feature-card${delay ? ` ${delay}` : ""}`}
-      style={{
-        background: "linear-gradient(180deg,#141f30,#111a29)",
-        border: "1px solid var(--border)",
-        borderRadius: 16,
-        padding: 32,
-        boxShadow: "var(--shadow-card)",
-      }}
-    >
-      <div
-        style={{
-          width: 52,
-          height: 52,
-          background: "linear-gradient(180deg,rgba(249,115,22,.16),rgba(249,115,22,.07))",
-          border: "1px solid rgba(249,115,22,.18)",
-          borderRadius: 14,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginBottom: 20,
-          position: "relative",
-          zIndex: 1,
-        }}
-      >
+    <div className={`fade-in-up card${delay ? ` ${delay}` : ""}`} style={{ "--c": color } as CSSProperties}>
+      <div className="icon-tile" style={{ marginBottom: 20 }}>
         {icon}
       </div>
-      <h3
-        className="lh"
-        style={{ fontFamily: condensed, fontWeight: 700, fontSize: 22, color: "#fff", marginBottom: 10 }}
-      >
+      <h3 className="lh" style={{ marginBottom: 10 }}>
         {title}
       </h3>
-      <p className="lb" style={{ color: "#94A3B8", fontSize: 14, lineHeight: 1.75 }}>
-        {desc}
-      </p>
+      <p className="lb">{desc}</p>
     </div>
   );
 }
@@ -61,28 +33,18 @@ function ProblemCard({
 export function Problem() {
   const { t } = useLanguage();
   return (
-    <section style={{ background: "#0F1923", padding: "96px 24px" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-        <div className="fade-in-up">
-          <div className="section-label lb">{t.probLabel}</div>
-          <h2
-            className="lh"
-            style={{
-              fontFamily: condensed,
-              fontWeight: 700,
-              fontSize: 44,
-              lineHeight: 1.05,
-              color: "#fff",
-              maxWidth: 580,
-            }}
-          >
-            {t.probHeading}
-          </h2>
+    <section className="section" style={{ background: "#fff", paddingTop: 56 }}>
+      <div className="container">
+        <div className="fade-in-up" style={{ textAlign: "center", maxWidth: 680, margin: "0 auto" }}>
+          <div className="section-label lb" style={{ color: "var(--orange-deep)", background: "rgba(255,107,26,.1)" }}>
+            {t.probLabel}
+          </div>
+          <h2 className="h2 lh">{t.probHeading}</h2>
         </div>
         <div className="problem-grid" style={{ marginTop: 52 }}>
-          <ProblemCard icon={<FileIcon width={26} height={26} />} title={t.probC1t} desc={t.probC1d} />
-          <ProblemCard icon={<BellOffIcon width={26} height={26} />} title={t.probC2t} desc={t.probC2d} delay="fd1" />
-          <ProblemCard icon={<BarChartIcon width={26} height={26} />} title={t.probC3t} desc={t.probC3d} delay="fd2" />
+          <ProblemCard icon={<FileIcon width={26} height={26} />} title={t.probC1t} desc={t.probC1d} color="#ff6b1a" />
+          <ProblemCard icon={<BellOffIcon width={26} height={26} />} title={t.probC2t} desc={t.probC2d} color="#ec4899" delay="fd1" />
+          <ProblemCard icon={<BarChartIcon width={26} height={26} />} title={t.probC3t} desc={t.probC3d} color="#7c3aed" delay="fd2" />
         </div>
       </div>
     </section>

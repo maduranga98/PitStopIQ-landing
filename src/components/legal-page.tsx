@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const condensed = "var(--font-barlow), 'Barlow Condensed', sans-serif";
+const condensed = "var(--font-display), 'Plus Jakarta Sans', sans-serif";
 
 export interface LegalSection {
   heading: string;
@@ -20,16 +20,16 @@ export function LegalPage({
   sections: LegalSection[];
 }) {
   return (
-    <div style={{ background: "#070C14", minHeight: "100vh" }}>
+    <div style={{ background: "#f6f7ff", minHeight: "100vh" }}>
       <header
         style={{
           position: "sticky",
           top: 0,
           zIndex: 100,
-          background: "rgba(11,17,32,0.92)",
+          background: "rgba(255,255,255,0.9)",
           backdropFilter: "blur(14px)",
           WebkitBackdropFilter: "blur(14px)",
-          borderBottom: "1px solid #1E3A5F",
+          borderBottom: "1px solid #e7e9f5",
         }}
       >
         <div
@@ -64,16 +64,16 @@ export function LegalPage({
             fontWeight: 800,
             fontSize: "clamp(36px, 6vw, 52px)",
             lineHeight: 1.05,
-            color: "#fff",
+            color: "#0f1b3d",
             marginBottom: 12,
           }}
         >
           {title}
         </h1>
-        <p style={{ color: "#64748B", fontSize: 13, marginBottom: 40 }}>
+        <p style={{ color: "#7b86a6", fontSize: 13, marginBottom: 40 }}>
           Last updated: {lastUpdated}
         </p>
-        <p style={{ color: "#94A3B8", fontSize: 15, lineHeight: 1.8, marginBottom: 40 }}>
+        <p style={{ color: "#4a5578", fontSize: 15, lineHeight: 1.8, marginBottom: 40 }}>
           {intro}
         </p>
 
@@ -84,7 +84,7 @@ export function LegalPage({
                 fontFamily: condensed,
                 fontWeight: 700,
                 fontSize: 24,
-                color: "#fff",
+                color: "#0f1b3d",
                 marginBottom: 14,
               }}
             >
@@ -93,7 +93,7 @@ export function LegalPage({
             {section.body.map((paragraph) => (
               <p
                 key={paragraph.slice(0, 40)}
-                style={{ color: "#94A3B8", fontSize: 15, lineHeight: 1.8, marginBottom: 12 }}
+                style={{ color: "#4a5578", fontSize: 15, lineHeight: 1.8, marginBottom: 12 }}
               >
                 {paragraph}
               </p>
@@ -103,7 +103,7 @@ export function LegalPage({
                 {section.list.map((item) => (
                   <li
                     key={item.slice(0, 40)}
-                    style={{ color: "#94A3B8", fontSize: 15, lineHeight: 1.8, marginBottom: 8 }}
+                    style={{ color: "#4a5578", fontSize: 15, lineHeight: 1.8, marginBottom: 8 }}
                   >
                     {item}
                   </li>
@@ -117,15 +117,15 @@ export function LegalPage({
           style={{
             marginTop: 56,
             paddingTop: 24,
-            borderTop: "1px solid #1E3A5F",
-            color: "#64748B",
+            borderTop: "1px solid #e7e9f5",
+            color: "#7b86a6",
             fontSize: 14,
             lineHeight: 1.8,
           }}
         >
           <p style={{ marginBottom: 4 }}>
             Questions? Contact us at{" "}
-            <a href="mailto:info@lumoraventures.com" style={{ color: "#F97316" }}>
+            <a href="mailto:info@lumoraventures.com" style={{ color: "#7c3aed" }}>
               info@lumoraventures.com
             </a>{" "}
             or on WhatsApp at{" "}
@@ -133,7 +133,7 @@ export function LegalPage({
               href="https://wa.me/94711100800"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#F97316" }}
+              style={{ color: "#7c3aed" }}
             >
               +94 71 110 0800
             </a>

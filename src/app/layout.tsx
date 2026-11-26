@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import {
-  Barlow_Condensed,
   Inter,
   Noto_Sans_Sinhala,
   Noto_Sans_Tamil,
+  Plus_Jakarta_Sans,
 } from "next/font/google";
 import "./globals.css";
 
@@ -13,8 +13,8 @@ const inter = Inter({
   display: "swap",
 });
 
-const barlow = Barlow_Condensed({
-  variable: "--font-barlow",
+const display = Plus_Jakarta_Sans({
+  variable: "--font-display",
   subsets: ["latin"],
   weight: ["600", "700", "800"],
   display: "swap",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0B1120",
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
@@ -118,7 +118,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${barlow.variable} ${notoSinhala.variable} ${notoTamil.variable} antialiased`}
+      className={`${inter.variable} ${display.variable} ${notoSinhala.variable} ${notoTamil.variable} antialiased`}
     >
       <body>
         <script

@@ -2,298 +2,57 @@
 
 import { useLanguage } from "@/lib/language-context";
 import { waLink } from "@/lib/translations";
-import { MessageIcon, WhatsAppIcon } from "./icons";
-
-const headingStyle = {
-  fontFamily: "'Barlow Condensed',sans-serif",
-  fontWeight: 700,
-} as const;
-
-function DashboardRow({
-  plate,
-  name,
-  status,
-  color,
-  bg,
-}: {
-  plate: string;
-  name: string;
-  status: string;
-  color: string;
-  bg: string;
-}) {
-  return (
-    <div
-      style={{
-        padding: "14px 20px",
-        borderBottom: "1px solid rgba(30,58,95,.4)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-      }}
-    >
-      <div>
-        <div
-          style={{
-            fontFamily: "'Barlow Condensed',sans-serif",
-            fontWeight: 700,
-            fontSize: 15,
-            letterSpacing: ".06em",
-            color: "#fff",
-          }}
-        >
-          {plate}
-        </div>
-        <div style={{ fontSize: 11, color: "#64748B", marginTop: 2 }}>{name}</div>
-      </div>
-      <span
-        style={{
-          background: bg,
-          color,
-          fontSize: 11,
-          fontWeight: 600,
-          padding: "4px 11px",
-          borderRadius: 20,
-        }}
-      >
-        {status}
-      </span>
-    </div>
-  );
-}
+import { WhatsAppIcon } from "./icons";
 
 export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section
-      style={{
-        background: "#070C14",
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        padding: "140px 24px 100px",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      {/* faint grid texture for depth */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage:
-            "linear-gradient(rgba(148,163,184,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.05) 1px,transparent 1px)",
-          backgroundSize: "56px 56px",
-          maskImage: "radial-gradient(ellipse 90% 70% at 50% 0%,#000 20%,transparent 75%)",
-          WebkitMaskImage: "radial-gradient(ellipse 90% 70% at 50% 0%,#000 20%,transparent 75%)",
-          pointerEvents: "none",
-        }}
-      />
-      {/* single soft ambient glow, static */}
-      <div
-        style={{
-          position: "absolute",
-          top: -160,
-          right: -80,
-          width: 720,
-          height: 720,
-          background:
-            "radial-gradient(ellipse at center,rgba(249,115,22,.07) 0%,transparent 60%)",
-          pointerEvents: "none",
-        }}
-      />
-      <div style={{ maxWidth: 1280, margin: "0 auto", width: "100%", position: "relative", zIndex: 1 }}>
-        <div className="hero-grid">
+    <section className="hero">
+      <div className="hero-dots" />
+      <div className="hero-blob" style={{ top: -120, left: -120, width: 420, height: 420, background: "rgba(59,130,246,.55)" }} />
+      <div className="hero-blob" style={{ bottom: 40, right: -100, width: 460, height: 460, background: "rgba(255,160,40,.5)", animationDelay: "-5s" }} />
+
+      <div className="container" style={{ zIndex: 1 }}>
+        <div className="hero-center">
           <div>
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 9,
-                background: "rgba(249,115,22,.08)",
-                border: "1px solid rgba(249,115,22,.22)",
-                borderRadius: 9999,
-                padding: "6px 14px 6px 12px",
-                marginBottom: 28,
-              }}
-            >
-              <span
-                style={{
-                  width: 6,
-                  height: 6,
-                  borderRadius: "50%",
-                  background: "#F97316",
-                  boxShadow: "0 0 8px rgba(249,115,22,.7)",
-                  flexShrink: 0,
-                }}
-              />
-              <span
-                className="lb"
-                style={{
-                  fontSize: 11,
-                  fontWeight: 700,
-                  letterSpacing: ".14em",
-                  textTransform: "uppercase",
-                  color: "#F97316",
-                }}
-              >
-                {t.heroEyebrow}
-              </span>
+            <div className="hero-pill hero-a1 lb">
+              <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#4ade80", flexShrink: 0 }} />
+              {t.heroEyebrow}
             </div>
-            <h1 className="hero-headline lh">
-              <span className="hw hw0">{t.heroH1a}</span>
+            <h1 className="hero-headline lh hero-a2">
+              {t.heroH1a}
               <br />
-              <span className="hw hw1">{t.heroH1b}</span>
+              <span className="hero-hl-accent">{t.heroH1b}</span>
             </h1>
-            <p
-              className="hero-sub lb"
-              style={{
-                marginTop: 24,
-                fontSize: 18,
-                color: "#94A3B8",
-                lineHeight: 1.75,
-                maxWidth: 540,
-              }}
-            >
-              {t.heroSub}
-            </p>
-            <div className="hero-cta-row hero-ctas" style={{ marginTop: 36 }}>
+            <p className="hero-sub lb hero-a3">{t.heroSub}</p>
+            <div className="hero-ctas hero-a3">
               <a
                 href={waLink("Hi, I'm interested in PitstopIQ!")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary lb"
+                className="btn-white lb"
                 style={{ fontSize: 16, padding: "16px 32px" }}
               >
                 <WhatsAppIcon width={18} height={18} />
                 {t.heroCta1}
               </a>
-              <a
-                href="#pricing"
-                className="btn-secondary lb"
-                style={{ fontSize: 16, padding: "14px 32px" }}
-              >
+              <a href="#pricing" className="btn-ghost lb" style={{ fontSize: 16, padding: "14px 32px" }}>
                 {t.heroCta2}
               </a>
             </div>
-            <div className="hero-trust trust-stats">
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <span
-                  style={{
-                    width: 7,
-                    height: 7,
-                    background: "#F97316",
-                    borderRadius: "50%",
-                    display: "inline-block",
-                    flexShrink: 0,
-                  }}
-                />
-                <span className="lb" style={{ fontSize: 14, color: "#94A3B8", fontWeight: 500 }}>
-                  {t.heroStat1}
-                </span>
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <span
-                  style={{
-                    width: 7,
-                    height: 7,
-                    background: "#1E3A5F",
-                    borderRadius: "50%",
-                    display: "inline-block",
-                    flexShrink: 0,
-                  }}
-                />
-                <span className="lb" style={{ fontSize: 14, color: "#64748B" }}>
-                  {t.heroStat2}
-                </span>
-              </div>
+            <div className="trust-stats hero-a4 lb">
+              <span className="trust-chip">✦ {t.heroStat1}</span>
+              <span className="trust-chip">✓ {t.heroStat2}</span>
             </div>
           </div>
 
-          <div className="dashboard-float">
-            <div
-              style={{
-                background: "#0F1923",
-                border: "1px solid var(--border-strong)",
-                borderRadius: 18,
-                overflow: "hidden",
-                boxShadow: "0 40px 80px -24px rgba(0,0,0,.75), inset 0 1px 0 rgba(255,255,255,.05)",
-              }}
-            >
-              <div
-                style={{
-                  background: "#162032",
-                  padding: "16px 20px",
-                  borderBottom: "1px solid #1E3A5F",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <span style={{ ...headingStyle, fontSize: 15, color: "#fff", letterSpacing: ".02em" }}>
-                  Active Services Today
-                </span>
-                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                  <div
-                    className="live-dot"
-                    style={{
-                      width: 8,
-                      height: 8,
-                      background: "#22C55E",
-                      borderRadius: "50%",
-                      boxShadow: "0 0 8px rgba(34,197,94,.6)",
-                    }}
-                  />
-                  <span style={{ fontSize: 12, color: "#22C55E", fontWeight: 600 }}>Live</span>
-                </div>
-              </div>
-              <DashboardRow plate="CAB-1234" name="Kamal Perera" status="In Progress" color="#F59E0B" bg="rgba(245,158,11,.14)" />
-              <DashboardRow plate="WP-KG-5678" name="Nimal Silva" status="Done" color="#22C55E" bg="rgba(34,197,94,.14)" />
-              <DashboardRow plate="NB-3421" name="Sunil Fernando" status="Pending" color="#94A3B8" bg="rgba(148,163,184,.1)" />
-              <div
-                style={{
-                  background: "#162032",
-                  borderTop: "1px solid #1E3A5F",
-                  padding: "12px 20px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <MessageIcon width={14} height={14} stroke="#94A3B8" />
-                  <span style={{ fontSize: 12, color: "#94A3B8" }}>3 reminder SMS sent today</span>
-                </div>
-                <span
-                  style={{
-                    background: "rgba(249,115,22,.2)",
-                    color: "#F97316",
-                    fontSize: 11,
-                    fontWeight: 700,
-                    padding: "3px 9px",
-                    borderRadius: 12,
-                  }}
-                >
-                  +3
-                </span>
-              </div>
-              <div
-                style={{
-                  background: "#070C14",
-                  padding: "9px 20px",
-                  textAlign: "center",
-                  borderTop: "1px solid rgba(30,58,95,.3)",
-                }}
-              >
-                <span style={{ fontSize: 10, color: "#374151", letterSpacing: ".06em" }}>
-                  Lumora Tech · Sent via PitstopIQ
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+
+      <svg className="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+        <path fill="#ffffff" d="M0,40 C240,80 480,0 720,30 C960,60 1200,70 1440,20 L1440,70 L0,70 Z" />
+      </svg>
     </section>
   );
 }
